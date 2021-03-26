@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New City Bakeries</title>
+    <script type="text/javascript" src="newcitybakeries_JS.js"></script>
+    <link href="newcitybakeries_style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+</head>
+<body>
+<div id="main">
+    <div id="header">
+        <table>
+            <tr>
+                <td><img src="cake3.jpg"></td>
+                <td><img src="cake2.jpg"></td>
+                <td><img src="cake11.jpg"></td>
+                <td><img src="cake12.jpg"></td>
+                <td><img src="cake8.jpg"></td>
+                <td><img src="cake5.jpg"></td>
+                <td><img src="cake4.jpg"></td>
+                <td><img src="cake6.jpg"></td>
+                <td><img src="cake7.jpg"></td>
+                <td><img src="cake13.jpg"></td>
+            </tr>
+        </table>
+    <h1>Welcome to New City Bakeries!</h1>
+    </div>
+<div id="content">
+<form>
+
+        <h1>Order here</h1>
+    <table id="info">
+        <tr>
+            <td>Firstname</td>
+            <td><input required="required" id="firstname"  type="text" pattern="^[A-Za-z -]+$" maxlength="25" size="30" autofocus ></td>
+        </tr>
+        <tr>
+            <td>Lastname</td>
+            <td><input required id="lastname" type="text" pattern="^[A-Za-z -]+$" maxlength="25" size="30"></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><input  required id="address"  type="text"  size="30" ></td>
+        </tr>
+        <tr>
+            <td>Postal Code</td>
+            <td><input id="postalcode" required type="text" pattern="[ABCEGHJKLMNPRSTVXY][0-9][ABCEGHJKLMNPRSTVWXYZ][0-9][ABCEGHJKLMNPRSTVWXYZ][0-9]" size="30" ></td>
+        </tr>
+        <tr>
+            <td>Phone Number</td>
+            <td><input required type="tel"  id="phoneNumber" pattern="[0-9]{10}" size="30"></td>
+        </tr>
+        <tr>
+            <td>E-mail</td>
+            <td><input id="email" required type="email" size="30" placeholder="example@site.net" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></td>
+        </tr>
+    </table>
+    <table id="order">
+        <tr>
+            <td>Shape:</td>
+        </tr>
+        <tr>
+            <td><input onclick="enable()" type="radio" name="cakeShape" value="sheetCake"></td><td>Square or Rectangular</td>
+        </tr>
+        <tr>
+            <td><input onclick="enable()" type="radio" name="cakeShape" value="roundCake"></td><td>Round</td>
+        </tr>
+        <tr>
+            <td>Number of layers</td>
+            <td><input type="number" size="5" id="numOfLayers" min="1" max="3"></td>
+        </tr>
+        <tr>
+            <td>Length (min 30cm, max 60cm) </td>
+            <td><input type="number" size="5" id="lengthCake" min="30" max="60" disabled></td>
+        </tr>
+        <tr>
+            <td>Width (min 30cm, max 45cm)</td>
+            <td><input type="number" size="5" id="widthCake" min="30" max="45" disabled></td>
+        </tr>
+        <tr>
+            <td>Radius (min 15cm, max 30cm)</td>
+            <td><input type="number" size="5" id="radiusCake" min="15" max="30" disabled></td>
+        </tr>
+    <tr>
+        <td>Additional Choices:</td>
+        <tr><td><input type="checkbox" name="creamCheese" value="creamCheese"></td><td>Cream Cheese - $5</td></tr>
+        <tr><td><input type="checkbox" name="fruitAlmonds" value="fruitAlmonds"></td><td>Fruit and Almonds topping - $7</td></tr>
+        <tr><td><input type="checkbox" name="fruitJam" value="fruitJam"></td><td>Fruit jam filling between layers - $4</td></tr>
+    </tr>
+    </table>
+    <button type="button" onclick="calculations()">Submit</button>
+    <button type="reset" onclick="resetInfo()">Reset</button>
+</form>
+</div>
+<div id="invoice">
+    <h1>Your information: </h1>
+    <p id="information"></p>
+    <h1>Your order: </h1>
+    <p id="extra"></p>
+    <table id="myTable"></table>
+    </div>
+</div>
+</div>
+</body>
+</html>
